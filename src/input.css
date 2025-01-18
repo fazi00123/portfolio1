@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* particular */
+/* ---- reset ---- */
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+  }
+  
+  /* ---- particles.js container ---- */
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: #b61924; */
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -111;
+  }
+  
+  /* ---- stats.js ---- */
+  
+  .count-particles{
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  .js-count-particles{
+    font-size: 1.1em;
+  }
+  
+  #stats,
+  .count-particles{
+    -webkit-user-select: none;
+  }
+  
+  #stats{
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+  }
+  
+  .count-particles{
+    border-radius: 0 0 3px 3px;
+  }
+  
+  
+  
+  
+  
+  
+  ::-webkit-scrollbar-track
+  {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #F5F5F5;
+  }
+  
+  ::-webkit-scrollbar
+  {
+      width: 6px;
+      background-color: #F5F5F5;
+  }
+  
+  ::-webkit-scrollbar-thumb
+  {
+      background-color: #000000;
+  }
+  
+
+
+
+
+
+
+
+  /* From Uiverse.io by 212004ALJI */ 
+.hire,.hire::after {
+    padding: 10px 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    border: 1px solid#5AC3E3;
+  }
+  
+  .hire::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'HIRE ME';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+  
+  .hire:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #5AC3E3, 3px 3px 0px white;
+    background-color: transparent;
+    border: 3px solid #5AC3E3;
+  }
+  
+  .hire:hover {
+    text-shadow: -1px -1px 0px #5AC3E3, 1px 1px 0px white;
+  }
+  
+  .hire:hover {
+    background-color: transparent;
+    border: 1px solid #5AC3E3;
+    box-shadow: 0px 10px 10px -10px #5AC3E3;
+  }
+  
+  @keyframes glitch_4011 {
+    0% {
+      clip-path: var(--move1);
+      transform: translate(0px,-10px);
+    }
+  
+    10% {
+      clip-path: var(--move2);
+      transform: translate(-10px,10px);
+    }
+  
+    20% {
+      clip-path: var(--move3);
+      transform: translate(10px,0px);
+    }
+  
+    30% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    40% {
+      clip-path: var(--move5);
+      transform: translate(10px,-10px);
+    }
+  
+    50% {
+      clip-path: var(--move6);
+      transform: translate(-10px,10px);
+    }
+  
+    60% {
+      clip-path: var(--move1);
+      transform: translate(10px,-10px);
+    }
+  
+    70% {
+      clip-path: var(--move3);
+      transform: translate(-10px,10px);
+    }
+  
+    80% {
+      clip-path: var(--move2);
+      transform: translate(10px,-10px);
+    }
+  
+    90% {
+      clip-path: var(--move4);
+      transform: translate(-10px,10px);
+    }
+  
+    100% {
+      clip-path: var(--move1);
+      transform: translate(0);
+    }
+  }
+  
+
+  /* second button */
+  .btn {
+    width: 12.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: #5AC3E3;
+    color:  black;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   button:hover {
+    color: white;
+    background-color: transparent;
+   }
+   
+   button:after {
+    content: "";
+    background: #002333;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+
+
+
+   /* time counter */
+
+   #clockdiv {
+    font-family: sans-serif;
+    color: #5AC3E3;
+    display: inline-block;
+    font-weight: 900;
+    text-align: center;
+    font-size: 44px;
+  }
+  
+  #clockdiv > div {
+    padding: 10px;
+    border-radius: 3px;
+    background: transparent;
+    display: inline-block;
+  }
+  
+  #clockdiv div > span {
+    padding: 15px;
+    border-radius: 3px;
+    background: transparent;
+    display: inline-block;
+  }
+  
+  .smalltext {
+    padding-top: 5px;
+    font-size: 22px;
+  }
